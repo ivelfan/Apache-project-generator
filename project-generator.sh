@@ -53,7 +53,7 @@ echo "Enable this site in Apache's configuration ? (y/n)"
   read ACCORD
 if [[ ${ACCORD} == "y" ]]
 then
- sudo ln -s ${PROJECT_BASE}/$1/conf/apache.conf /etc/apache2/sites-enabled/$1
+ sudo ln -s ${PROJECT_BASE}/$1/conf/apache.conf ${APACHE_HOME}/sites-enabled/$1
  sudo /etc/init.d/apache2 restart
 fi
 
